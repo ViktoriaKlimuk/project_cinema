@@ -1,0 +1,96 @@
+$index: calc(1vw + 1vh);
+
+$primary-blue:#2E1371;
+$primary-black:#130B2B;
+$background-grey:#222;
+
+$text-gray:rgba(255,255,255, 0.6);
+
+$light-green:#09FBD3;
+$pink:#FF53C0;
+
+$button-red:#B6116B;
+$button-blue:#3D1581;
+
+$text-active:$light-green;
+
+
+@mixin radialColor($color) {
+	background: radial-gradient(#FFFFFF, $color);
+}
+
+@mixin category-text {
+	font-size: calc($index * 2);
+	letter-spacing: 5%;
+	font-weight: 500;
+}
+
+@mixin animation-border {
+	&::after {
+		position: absolute;
+		content: "";
+		top: calc(-1 * var(--border-width));
+		left: calc(-1 * var(--border-width));
+		z-index: -1;
+		width: calc(100% + var(--border-width) * 2);
+		height: calc(100% + var(--border-width) * 2);
+		background: linear-gradient(
+		  60deg,
+		  hsl(224, 85%, 66%),
+		  hsl(269, 85%, 66%),
+		  hsl(314, 85%, 66%),
+		  hsl(359, 85%, 66%),
+		  hsl(44, 85%, 66%),
+		  hsl(89, 85%, 66%),
+		  hsl(134, 85%, 66%),
+		  hsl(179, 85%, 66%)
+		);
+		background-size: 300% 300%;
+		background-position: 0 50%;
+		border-radius: calc($index * 1);
+		animation: moveGradient 2s alternate infinite;
+	 }
+}
+@keyframes moveGradient {
+	50% {
+	  background-position: 100% 50%;
+	}
+ }
+
+
+
+
+
+@mixin fade-bg-gradient($direction: 90deg) {
+	&::before {
+		width: 101%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 1;
+		content: '';
+		border-radius: calc($index * 0.9);
+		background: linear-gradient(
+			$direction,
+			#101215 3.31%,
+			rgba(#101215, 0.99) 7.71%,
+			rgba(#101215, 0.96) 12.11%,
+			rgba(#101215, 0.91) 16.51%,
+			rgba(#101215, 0.85) 20.91%,
+			rgba(#101215, 0.76) 25.31%,
+			rgba(#101215, 0.67) 29.71%,
+			rgba(#101215, 0.55) 34.11%,
+			rgba(#101215, 0.44) 38.52%,
+			rgba(#101215, 0.33) 42.92%,
+			rgba(#101215, 0.23) 47.32%,
+			rgba(#101215, 0.15) 51.72%,
+			rgba(#101215, 0.08) 56.12%,
+			rgba(#101215, 0.03) 60.52%,
+			rgba(#101215, 0.01) 64.92%,
+			rgba(#101215, 0) 69.32%
+		);
+	}
+}

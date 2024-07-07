@@ -1,0 +1,57 @@
+@import '../../../../../../styles/variables.scss';
+
+
+.list{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	font-size: calc($index * 0.6);
+	>div{
+		display: flex;
+	}
+}
+.actors{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	p{
+		width: 100%;
+		color:white;
+		font-size:calc($index * 0.8);
+		letter-spacing: calc($index * 0.25);
+		font-weight: 600;
+		padding:calc($index * 1) 0 calc($index * 1) 0;
+		text-align: left;
+		border-top: 1px solid rgba(255,255,255, 0.2);
+	}
+	> div{
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		div{
+			width: calc($index * 5);
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			transition: all 0.4s ease-in;
+			a{
+				width: calc($index * 6);
+				font-size: calc($index * 0.55);
+				letter-spacing: calc($index * 0.08);
+				text-shadow: $text-gray 1px 0 10px;
+			}
+			img{
+				width: calc($index * 6);
+				height: calc($index * 6);
+				object-fit: cover;
+				object-position:center;
+				border-radius: calc($index * 5);
+			}
+			:not(:last-child){
+				margin-bottom: calc($index * 0.8);
+			}
+		}
+	}
+}

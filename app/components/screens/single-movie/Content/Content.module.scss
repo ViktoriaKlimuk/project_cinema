@@ -1,0 +1,46 @@
+@import '../../../../../styles/variables.scss';
+
+.content{
+	width: 100%;
+	position: absolute;
+	z-index: 20;
+	margin: 0 0 calc($index * 2) calc($index * 2);
+	text-align: left;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	.details {
+		display: flex;
+		flex-direction: column;
+		p{
+			font-size: calc($index * 0.6);
+		}
+		span{
+			color:$text-gray;
+		}
+		:not(:last-child){
+			margin-bottom:calc($index * 0.3);
+		}
+	}
+	h1{
+		font-size: calc($index * 2);
+		font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		margin-bottom:calc($index * 1);
+	}
+	.ratingContainer{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		right:10%;
+		div{
+			display: flex;
+			align-items: center;
+			font-size: calc($index * 1);
+			img{
+				width: calc($index * 1.5);
+			}
+		}
+	}
+}

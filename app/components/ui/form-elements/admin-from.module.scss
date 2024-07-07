@@ -1,0 +1,76 @@
+@import '../../../../styles/variables.scss';
+
+.form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	.inputCheckbox{
+		width: calc($index * 1);
+		height: calc($index * 1);
+		font-size: calc($index * 2);
+	}
+	input {
+		width: 85%;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		border-radius: calc($index * 0.3);
+	}
+}
+.formSection {
+	width: 100%;
+	margin-bottom: calc($index * 3);
+}
+.formSelect{
+	width: 100%;
+	display: flex;
+	gap: 0 calc($index * 3);
+	margin-bottom: calc($index * 4);
+}
+.formWrapper {
+	width: 100%;
+	display: flex;
+	gap: 0 calc($index * 3);
+	margin-bottom: calc($index * 0.5);
+	.input {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+.updateButton {
+	width: 20%;
+}
+.photo {
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 0 calc($index * 1);
+	.photoContainer {
+		width: calc($index * 5);
+		height: calc($index * 5);
+		.actorPhoto{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			border-radius: calc($index * 0.3);
+		}
+	}
+}
+.buttonAdmin {
+	font-size: calc($index * 1);
+	border-radius: calc($index * 0.5);
+	border: none;
+	background-color: red;
+	color: white;
+	padding: 10px 20px;
+	margin-bottom:25px;
+}

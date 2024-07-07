@@ -1,0 +1,29 @@
+@import '../../../../../styles/variables.scss';
+.nav {
+	width: 100%;
+ul {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $background-grey;
+	padding: calc($index * 1) 0;
+	border-radius: calc($index * 1);
+	li{
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		:hover{
+			color: $text-active;
+		}
+		a{
+			font-size: calc($index * 0.7);
+		}
+		.active{
+			color: $text-active;
+			border-bottom: 2px solid $text-active;
+		}
+	}
+}
+}

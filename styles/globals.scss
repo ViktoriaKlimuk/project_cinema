@@ -1,0 +1,41 @@
+@import "../styles/reset.scss";
+@import "../styles/variables.scss";
+@import '../styles/react-select.scss';
+
+@import 'swiper/scss';
+@import 'swiper/scss/pagination';
+@import 'swiper/scss/navigation';
+
+// @import url("https://fonts.googleapis.com/css?family=Jura:300,regular,500,600,700");
+@import 'react-redux-toastr/src/styles/index';
+
+
+body{
+	width: 100vw;
+	height: 100%;
+	font-family: Jura !important;
+	color: white;
+	font-size: 20px;
+	background: #020510;
+}
+
+
+
+
+// .slide-animation-enter {
+// 	opacity: 0;
+// 	transform: scale(0.9);
+// }
+// .slide-animation-enter-active {
+// 	opacity: 1;
+// 	transform: translateX(0);
+// 	transition: opacity 300ms, transform 300ms;
+// }
+// .slide-animation-exit {
+// 	opacity: 1;
+// }
+// .slide-animation-exit-active {
+// 	opacity: 0;
+// 	transform: scale(0.9);
+// 	transition: opacity 300ms, transform 300ms;
+// }

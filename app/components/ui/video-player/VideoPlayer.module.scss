@@ -1,0 +1,80 @@
+@import '../../../../styles/variables.scss';
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	margin-top: 50px;
+	border-radius: 50px;
+	overflow: hidden;
+	.controls {
+		position: absolute;
+		display: flex;
+		justify-content: space-between;
+		bottom: 25px;
+		left: 50px;
+		right: 50px;
+		> div:first-child {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			> button {
+				font-size: 1.5rem; /* 24px */
+				line-height: 2rem; /* 32px */
+				color: white;
+				margin-right: 25px;
+				outline: none;
+				opacity: 0.6;
+				transition: opacity 0.3s ease;
+				&:hover {
+					opacity: 1;
+				}
+			}
+			.playButton {
+				font-size: 3rem; /* 24px */
+				line-height: 4rem; /* 32px */
+			}
+			.timeControls {
+				display: flex;
+				align-items: center;
+				color: white;
+				margin-left: 25px;
+				opacity: 0.6;
+				> p:nth-child(2) {
+					margin-left: 0.5rem; /* 8px */
+					margin-right: 0.5rem; /* 8px */
+				}
+			}
+		}
+		> div:last-child {
+			display: flex;
+			align-items: center;
+
+			> button {
+				color: white;
+				font-size: 3rem; /* 24px */
+				line-height: 4rem; /* 32px */
+				outline: none;
+				opacity: 0.6;
+				transition: opacity 0.3s ease;
+				&:hover{
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.progressBarContainer {
+		position: absolute;
+		width: calc(100% - 2rem);
+		left: 25px;
+		right: 25px;
+		bottom: 50px;
+		background-color: $text-gray;
+		border-radius: 50px;
+		height: 5px;
+		.progressBar {
+			border-radius: 25px;
+			height: 100%;
+			background-color: $button-red;
+		}
+	}
+}

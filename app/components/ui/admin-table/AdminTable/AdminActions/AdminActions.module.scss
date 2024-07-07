@@ -1,0 +1,15 @@
+@import '../../../../../../styles/variables.scss';
+
+.actions {
+	:not(:last-child){
+		margin-right:10px;
+	}
+	> button{
+		display: flex;
+		background-color: transparent;
+		border: none;
+		color:$button-red;
+		font-size: calc($index * 1);
+		cursor: pointer;
+	}
+}

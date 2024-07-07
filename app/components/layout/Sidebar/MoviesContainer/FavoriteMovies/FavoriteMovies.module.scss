@@ -1,0 +1,9 @@
+@import '../../../../../../styles/variables.scss';
+
+.notAuth {
+	background-color: $background-grey;
+	color:white;
+	border-radius: 25px;
+	padding:10px 20px;
+	text-align: left;
+}

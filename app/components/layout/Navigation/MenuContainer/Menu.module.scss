@@ -1,0 +1,49 @@
+@import "../../../../../styles/variables.scss";
+
+.heading {
+	font-size: calc($index * 1);
+  text-align: center;
+  margin-bottom: calc($index * 1);
+  background: -webkit-linear-gradient(#1A6DFF, #C822FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.navlink {
+  color: white;
+  text-decoration: none;
+  svg {
+    font-size: calc($index * 0.7);
+    margin: 0 10px 0 0;
+  }
+}
+.title {
+  font-size: calc($index * 0.7);
+  text-wrap: nowrap;
+}
+
+.list {
+	width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  > li {
+	transition: all 0.3s ease;
+    &.active {
+      transform: scale(1.2);
+      h3 {
+        color: $button-red;
+      }
+      > a > svg {
+        fill: $button-red;
+      }
+    }
+  }
+}
+

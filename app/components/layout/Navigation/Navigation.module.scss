@@ -1,0 +1,24 @@
+@import "../../../../styles/variables.scss";
+
+
+.navigation {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	.leftSide{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	:not(:last-child){
+		margin-right:calc($index * 1.2)
+	}
+	}
+	.rightSide{
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		}
+ }

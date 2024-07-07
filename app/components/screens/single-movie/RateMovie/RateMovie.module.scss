@@ -1,0 +1,9 @@
+@import '../../../../../styles/variables.scss';
+
+.wrapper{
+	width: 100%;
+	> div{
+		margin-top: calc($index * 0.5);
+		font-size: calc($index * 1.5);
+	}
+}

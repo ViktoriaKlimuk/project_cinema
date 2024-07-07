@@ -1,0 +1,121 @@
+@import '../../../../styles/variables.scss';
+
+
+.singleMovie{
+	width: 100%;
+	height: 100%;
+	.actors{
+		width: 100%;
+		div{
+			width: 100%;
+			display: flex;
+			align-items:flex-start;
+			justify-content: space-evenly;
+		}
+	}
+}
+.wrapper {
+	width: 100%;
+	height: 100%;
+	margin:5% 0;
+	>:not(:last-child){
+		margin-bottom: calc($index * 2);
+	}
+}
+.videoContainer{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	iframe{
+		width: 50%;
+		height: calc($index * 25);
+		border-radius: calc($index * 1.5);
+	}
+	.details{
+		width: 40%;
+		h1{
+			font-size: calc($index * 1.2);
+			margin-bottom: calc($index * 2);
+			text-align: left;
+		}
+		.detailsContainer{
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			text-align: left;
+			font-size: calc($index * 0.7);
+			.filmDesc{
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				margin-bottom: calc($index * 2);
+				span{
+					letter-spacing: calc($index * 0.08);
+					line-height: 130%;
+					font-size: calc($index * 0.8);
+					margin-bottom: calc($index * 0.3);
+				}
+			}
+			.params{
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				letter-spacing: calc($index * 0.08);
+				margin-bottom: calc($index * 2);
+				>:not(:last-child){
+					margin-bottom: calc($index * 0.3);
+				}
+				>div {
+					display: flex;
+					align-items: center;
+					font-size: calc($index * 0.7);
+				}
+			}
+		}
+		p{
+			line-height: 130%;
+		}
+		span{
+			color:$text-gray;
+		}
+		.list{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.detailsRating{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items:flex-start;
+			justify-content: center;
+			.ratingContainer {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: flex-start;
+				justify-content: flex-start;
+				padding:calc($index * 0.5) 0 calc($index * 1) 0;
+				.votes{
+					margin-left: 5px;
+					font-size: calc($index * 0.6);
+				}
+				:not(:last-child){
+					margin-right:calc($index * 1)
+				}
+				div{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					p{
+						font-size: calc($index * 1);
+						margin-left:calc($index * 0.3)
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+@import '../../../../styles/variables.scss';
+
+.wrapper {
+	width: 50%;
+	height: 100%;
+	background-color: $background-grey;
+	padding:calc($index * 2) calc($index * 1.5);
+	border-radius: calc($index * 2);
+	box-shadow: 0px 0px 25px 2px black;
+	form{
+		width: 100%;
+		h1{
+			font-size: calc($index * 1.2);
+			margin:0 0 calc($index * 1.5) 0;
+		}
+		div{
+			width: 100%;
+		}
+		.buttons{
+			width: 100%;
+			display: flex;
+			margin:0;
+			padding:0;
+			> button{
+				color: white;
+				width: 100%;
+				padding: calc($index * 0.5) 0;
+				background-color: $background-grey;
+				font-size: calc($index * 0.7);
+				box-shadow: 0px 0px 5px 1px black;
+				&:first-child{
+					background-color:rgb(46, 19, 113, 0.3);
+					border-radius: calc($index * 1) 0 0 calc($index * 1);
+					transition: background-color 0.3s ease-in-out;
+					&:hover{
+						background-color: $primary-blue;
+					}
+				}
+				&:last-child{
+					border-radius: 0 calc($index * 1) calc($index * 1) 0;
+					background-color:rgb(46, 19, 113, 0.3);
+					transition: background-color 0.3s ease-in-out;
+					&:hover{
+						background-color: $primary-blue;
+					}
+				}
+			}
+
+			}
+	}
+}

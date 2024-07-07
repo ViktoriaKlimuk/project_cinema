@@ -1,0 +1,20 @@
+@import '../../../../styles/variables.scss';
+
+
+.swiper {
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+ }
+ 
+ .swiper-slide {
+	background-position: center;
+	background-size: cover;
+	width: calc($index * 30);
+	height: calc($index * 30);
+ }
+ 
+ .swiper-slide img {
+	display: block;
+	width: calc($index * 30);
+ }
