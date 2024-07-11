@@ -135,7 +135,7 @@
 	transition-delay: calc(0.7 / 8);
 	transition-property: opacity, transform;
 	transition-duration: calc(0.7 / 2);
-	overflow: scroll;
+	overflow-x: auto;
 }
 
 .icons {
@@ -158,7 +158,7 @@
 	}
 	.synopsis {
 		transition-duration: 0.3s;
-		transition-delay: calc(0.7 / 3);
+		// transition-delay: calc(0.7 / 3);
 	}
 
 	.icons svg {
@@ -176,7 +176,6 @@
 
 .movieCard:not(:hover) {
 	.synopsis {
-		opacity: 0;
 		transform: translateY(1em);
 	}
 	.icons svg {
