@@ -25,14 +25,14 @@ const Gallery: FC<{ items: IGalleryItem[] }> = ({ items }) => {
 						slidesPerView: 1,
 						spaceBetween: 40,
 					},
-					768: {
+					500: {
 						slidesPerView: 2,
 						spaceBetween: 40,
 					},
-					// 768: {
-					// 	slidesPerView: 3,
-					// 	spaceBetween: 25,
-					// }
+					768: {
+						slidesPerView: 3,
+						spaceBetween: 25,
+					}
 				}}
 				modules={[Navigation]}
 				className={styles.gallery}
