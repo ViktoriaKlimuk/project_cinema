@@ -2,7 +2,6 @@ import { FC } from 'react'
 import styles from './VideoPlayer.module.scss'
 import { IVideoPlayer } from './video.interface'
 import { useVideo } from './useVideo'
-import { useAuth } from '@/hooks/useAuth'
 import cn from 'classnames'
 import AuthPlaceholder from './AuthPlaceholder/AuthPlaceholder'
 import { BsFullscreen } from "react-icons/bs";
@@ -10,13 +9,7 @@ import { GrBackTen } from "react-icons/gr";
 import { GrForwardTen } from "react-icons/gr";
 import { GrPlay } from "react-icons/gr";
 import { GiPauseButton } from "react-icons/gi";
-
-
-
-
-
-
-
+import { useAuth } from '../../../hooks/useAuth'
 
 const VideoPlayer: FC<IVideoPlayer> = ({ slug, videoSource }) => {
 

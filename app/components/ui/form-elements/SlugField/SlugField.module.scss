@@ -10,7 +10,7 @@
 		border-radius: calc($index * 0.3);
 		font-size: calc($index * 0.5);
 		border: none;
-		background-color: whitesmoke;
+		background-color: $whitesmoke;
 		position: absolute;
 		right: 0;
 	}

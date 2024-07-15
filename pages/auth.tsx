@@ -1,4 +1,5 @@
-import Auth from "components/screens/auth/Auth"
+import Auth from "../app/components/screens/auth/Auth"
+
 
 const AuthPage = () => {
 	return(

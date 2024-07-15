@@ -1,12 +1,11 @@
 import { FC } from 'react'
 import styles from './Content.module.scss'
-import { IMovie } from '@/shared/interfaces/movie.types'
-
-import { getGenreUrl } from 'config/url.config'
-import FavoriteButton from '@/components/ui/favoriteButton/FavoriteButton'
 import ContentList from './ContentList/ContentList'
-import { useAuth } from '@/hooks/useAuth'
 import Image from 'next/image'
+import { IMovie } from '../../../../shared/interfaces/movie.types'
+import { useAuth } from '../../../../hooks/useAuth'
+import { getGenreUrl } from '../../../../config/url.config'
+import FavoriteButton from '../../../ui/favoriteButton/FavoriteButton'
 
 const Content: FC<{ movie: IMovie }> = ({ movie }) => {
 	const { user } = useAuth()

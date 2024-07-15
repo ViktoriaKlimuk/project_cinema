@@ -1,10 +1,11 @@
-import Meta from "@/utils/meta/Meta"
+
 import { FC } from "react"
 import AdminNavigation from "../AdminNavigation/AdminNavigation"
-import Heading from "@/components/ui/heading/Heading"
-import AdminHeader from "@/components/ui/admin-table/AdminHeader/AdminHeader"
 import { useMovies } from "./useMovies"
-import AdminTable from "@/components/ui/admin-table/AdminTable/AdminTable"
+import Meta from "../../../../utils/meta/Meta"
+import Heading from "../../../ui/heading/Heading"
+import AdminHeader from "../../../ui/admin-table/AdminHeader/AdminHeader"
+import AdminTable from "../../../ui/admin-table/AdminTable/AdminTable"
 
 
 const MovieList:FC = () => {

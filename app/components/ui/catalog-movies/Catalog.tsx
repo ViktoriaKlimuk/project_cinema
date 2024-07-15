@@ -1,11 +1,11 @@
 import { FC } from 'react'
 import styles from './Catalog.module.scss'
 import { ICatalog } from './catalog.interface'
-import Meta from '@/utils/meta/Meta'
 import Heading from '../heading/Heading'
 import Description from '../heading/Description'
 import GalleryItem from '../gallery/GalleryItem'
-import { getMovieUrl } from 'config/url.config'
+import Meta from '../../../utils/meta/Meta'
+import { getMovieUrl } from '../../../config/url.config'
 
 
 
@@ -22,7 +22,8 @@ const Catalog: FC<ICatalog> = ({ movies, title, description }) => {
 					<GalleryItem key={movie._id} item={{
 						name: movie.title,
 						posterPath: movie.bigPoster,
-						link: getMovieUrl(movie.slug),
+						link: getMovieUrl
+						(movie.slug),
 						rating: movie.rating,
 						description: movie.description,
 						series: movie.movieType === 'tv-series',

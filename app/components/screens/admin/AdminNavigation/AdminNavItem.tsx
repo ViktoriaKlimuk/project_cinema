@@ -11,12 +11,12 @@ const AdminNavItem: FC<{ item: INavItem }> = ({ item: { link, title } }) => {
 
 	return (
 		<li>
-			<Link href={link} legacyBehavior>
-				<a className={cn({
+			<Link href={link} legacyBehavior> 
+				<div className={cn({
 					[styles.active]: asPath === link
 				})}>
 					{title}
-				</a>
+				</div>
 			</Link>
 		</li>
 	)

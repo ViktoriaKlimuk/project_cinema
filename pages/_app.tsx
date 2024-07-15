@@ -1,8 +1,8 @@
 // import '../app/assets/styles/globals.scss'
 import '../styles/globals.scss';
 import type { AppProps } from "next/app";
-import { TypeComponentAuthFields } from '@/shared/interfaces/auth.types';
-import MainProvider from "providers/MainProvider";
+import MainProvider from '../app/providers/MainProvider';
+import { TypeComponentAuthFields } from '../app/shared/interfaces/auth.types';
 
 type TypeAppProps = AppProps & TypeComponentAuthFields
 

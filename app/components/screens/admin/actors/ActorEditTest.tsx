@@ -1,17 +1,18 @@
 import { FC, useState } from 'react'
 import { useForm } from 'react-hook-form'
-import Meta from '@/utils/meta/Meta'
 import AdminNavigation from '../AdminNavigation/AdminNavigation'
-import Heading from '@/components/ui/heading/Heading'
-import SkeletonLoader from '@/components/ui/skeleton-loader/SkeletonLoader'
-import Field from '@/components/ui/form-elements/Field'
-import SlugField from '@/components/ui/form-elements/SlugField/SlugField'
-import generateSlug from '@/utils/string/generateSlug'
 import styles from '../../../ui/form-elements/admin-from.module.scss'
-import Button from '@/components/ui/form-elements/Button'
 import { IActorEditInput } from './actor-edit.interface'
 import { useActorEdit } from './useActorEdit'
 import axios from 'axios'
+import Image from 'next/image'
+import Meta from '../../../../utils/meta/Meta'
+import Heading from '../../../ui/heading/Heading'
+import SkeletonLoader from '../../../ui/skeleton-loader/SkeletonLoader'
+import Field from '../../../ui/form-elements/Field'
+import SlugField from '../../../ui/form-elements/SlugField/SlugField'
+import generateSlug from '../../../../utils/string/generateSlug'
+import Button from '../../../ui/form-elements/Button'
 
 
 const ActorEditTest: FC = () => {
@@ -34,12 +35,12 @@ const ActorEditTest: FC = () => {
 	const getDataKinopoisk = async () => {
 		const config = {
 			headers: {
-				'X-API-KEY': 'a5bdd094-40d7-4f9c-b23b-d2a4cfc5042c',
+				'X-API-KEY': '3CX5GDV-YG4MAGG-P44ABMA-KZW8JFC',
 				'Content-Type': 'application/json',
 			},
 		}
 		try {
-			const response = await axios.get(`https://kinopoiskapiunofficial.tech/api/v1/staff/${actorID}`, config);
+			const response = await axios.get(`https://api.kinopoisk.dev/v1.4/person/${actorID}`, config);
 			setKinopoiskData(response.data);
 			console.log(response.data)
 		} catch (error) {
@@ -57,8 +58,8 @@ const ActorEditTest: FC = () => {
 			<button onClick={getDataKinopoisk}>Спарсить</button>
 			<button type="button" onClick={() => {
 				setValue("kinopoiskId", actorID)
-				setValue("name", kinopoiskData.nameRu)
-				setValue("photo", kinopoiskData.posterUrl)
+				setValue("name", kinopoiskData.name)
+				setValue("photo", kinopoiskData.photo)
 			}}>
 				Сгенерировать поля
 			</button>
@@ -104,7 +105,7 @@ const ActorEditTest: FC = () => {
 								className={styles.input}
 							/>
 							<div className={styles.photoContainer}>
-								<img src={getValues('photo')} alt="" className={styles.actorPhoto} />
+								<Image src={getValues('photo')} alt="" className={styles.actorPhoto} />
 							</div>
 						</div>
 						<Button className={styles.updateButton}>Обновить</Button>

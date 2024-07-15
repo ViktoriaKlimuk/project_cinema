@@ -1,12 +1,12 @@
 import { SubmitHandler, UseFormSetValue } from "react-hook-form";
 import { useRouter } from "next/router";
 import { useMutation, useQuery } from "react-query";
-import { toastError } from "@/utils/toastError";
-import { getKeys } from "@/utils/object/getKeys";
-import { getAdminUrl } from "config/url.config";
 import { IMovieEditInput } from "./movie-edit.interface";
-import { MovieService } from "@/services/movie.service";
 import { toastr } from "react-redux-toastr";
+import { MovieService } from "../../../../services/movie.service";
+import { getKeys } from "../../../../utils/object/getKeys";
+import { toastError } from "../../../../utils/toastError";
+import { getAdminUrl } from "../../../../config/url.config";
 
 
 

@@ -1,13 +1,13 @@
-import { ITableItem } from '@/components/ui/admin-table/AdminTable/admin-table.interface'
-import { getAdminUrl } from 'config/url.config'
-import { useDebounce } from '@/hooks/useDebounce'
-import { MovieService } from '@/services/movie.service'
-import { toastError } from '@/utils/toastError'
 import { toastr } from 'react-redux-toastr'
 import { ChangeEvent, useMemo, useState } from 'react'
 import { useMutation, useQuery } from 'react-query'
-import { getGenresList } from '@/utils/movie/getGenresList'
 import { useRouter } from 'next/router'
+import { useDebounce } from '../../../../hooks/useDebounce'
+import { MovieService } from '../../../../services/movie.service'
+import { ITableItem } from '../../../ui/admin-table/AdminTable/admin-table.interface'
+import { getAdminUrl } from '../../../../config/url.config'
+import { getGenresList } from '../../../../utils/movie/getGenresList'
+import { toastError } from '../../../../utils/toastError'
 
 export const useMovies = () => {
 	const [searchTerm, setSearchTerm] = useState('')

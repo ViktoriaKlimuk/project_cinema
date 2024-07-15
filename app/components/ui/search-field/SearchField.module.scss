@@ -27,11 +27,10 @@
 	position: absolute;
 	margin:auto;
 	top: 0;
-	left: 0;
-	right: 0;
+	right: 20px;
 	bottom: 0;
-	width: 80px;
-	height: 80px;
+	width: calc(clamp(1.875rem, 4.464vw + 0.982rem, 3.125rem));
+	height: calc(clamp(1.875rem, 4.464vw + 0.982rem, 3.125rem));
 	background-color: $button-blue;
 	border-radius: 50%;
 	z-index: 4;
@@ -45,9 +44,9 @@
 	content: ' ';
 	position: absolute;
 	margin: auto;
-	top: 22px;
-	left: 22px;
-	right: 0;
+	top: 25px;
+	left: 0;
+	right: -22px;
 	bottom: 0;
 	width: 12px;
 	height: 2px;
@@ -73,16 +72,12 @@
 	position: absolute;
 	margin: auto;
 	top: 0px;
-	left: 0;
-	right: 0;
+	right: 20px;
 	bottom: 0;
-	width: 50px;
 	height: 50px;
 	outline: none;
 	border: none;
 	background-color: $button-blue;
-	color: #fff;
-	text-shadow: 0 0 10px crimson;
 	padding: 0 80px 0 20px;
 	border-radius: 30px;
 	box-shadow: 0 0 25px 0 crimson, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
@@ -95,12 +90,12 @@
 	cursor: pointer;
 }
 .container input:focus {
-	width:600px;
+	width: 88%;
 	opacity: 1;
 	cursor: text;
 }
 .container input:focus ~ .search {
-	right: -600px;
+	right: 10px;
 	background-color: #151515;
 	z-index: 6;
 }
@@ -120,7 +115,6 @@
 	transform: rotate(-45deg);
 }
 .container input::placeholder {
-	color: #fff;
 	::-webkit-search-cancel-button {
 		width: 50px;
 		font-size: 50px;

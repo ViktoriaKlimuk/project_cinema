@@ -1,14 +1,14 @@
 import { FC } from "react"
 import { IHome } from "./home.interface"
-import Meta from "utils/meta/Meta"
-import Heading from "components/ui/heading/Heading"
-import Slider from "@/components/ui/slider/Slider"
-import SubHeading from "@/components/ui/heading/SubHeading"
-import Gallery from "@/components/ui/gallery/Gallery"
 import styles from '../../ui/gallery/Gallery.module.scss'
-import GalleryActor from "@/components/ui/gallery/GalleryActors/GalleryActor"
 import GenresSlide from "../collections/GenresSlide"
-import GalleryCategories from "@/components/ui/gallery/GalleryCategories"
+import Meta from "../../../utils/meta/Meta"
+import Heading from "../../ui/heading/Heading"
+import Slider from "../../ui/slider/Slider"
+import GalleryCategories from "../../ui/gallery/GalleryCategories"
+import Gallery from "../../ui/gallery/Gallery"
+import GalleryActor from "../../ui/gallery/GalleryActors/GalleryActor"
+import SubHeading from "../../ui/heading/SubHeading"
 
 const Home: FC<IHome> = ({ slides, actors, trendingMovies, genres, freshMovies}) => {
 	return (

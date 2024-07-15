@@ -56,7 +56,6 @@
 		backdrop-filter: blur(3px);
 		border-radius: calc($index * 0.3);
 		border: none;
-		color:white;
 		padding: calc($index * 0.6) calc($index * 0.3);
 		font-size: calc($index * 1.5);
 		cursor: pointer;
@@ -71,8 +70,6 @@
 		}
 	}
 }
-
-
 
 .container {
 	width: 100%;
@@ -109,7 +106,6 @@
 	// 	transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 	//  }
 	 h3 {
-		color: white;
 		font-size: calc($index * 1);
 	 }
  }

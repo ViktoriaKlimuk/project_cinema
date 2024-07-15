@@ -2,11 +2,11 @@ import { SubmitHandler, UseFormSetValue } from "react-hook-form";
 import { IGenreEditInput } from "./genre-edit.interface";
 import { useRouter } from "next/router";
 import { useMutation, useQuery } from "react-query";
-import { GenreService } from "@/services/genre.service";
-import { toastError } from "@/utils/toastError";
-import { getKeys } from "@/utils/object/getKeys";
-import { getAdminUrl } from "config/url.config";
 import { toastr } from "react-redux-toastr";
+import { GenreService } from "../../../../services/genre.service";
+import { getKeys } from "../../../../utils/object/getKeys";
+import { toastError } from "../../../../utils/toastError";
+import { getAdminUrl } from "../../../../config/url.config";
 
 
 

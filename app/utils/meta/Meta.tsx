@@ -2,9 +2,9 @@ import { PropsWithChildren, type FC } from "react";
 import Head from "next/head";
 import { ISeo } from "./meta.interface";
 import { useRouter } from "next/router";
-import { siteName, titleMerge } from "config/seo.config";
-import { onlyText } from "utils/string/clearText";
-import logoImage from '@/assets/logo/logo.svg'
+import logoImage from '../../assets/logo/logo.svg'
+import { siteName, titleMerge } from "../../config/seo.config";
+import { onlyText } from "../string/clearText";
 
 
 

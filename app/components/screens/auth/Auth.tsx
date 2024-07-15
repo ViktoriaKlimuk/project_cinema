@@ -1,14 +1,15 @@
-import { useAuth } from "hooks/useAuth"
-import { useAuthRedirect } from "hooks/useAuthRedirect"
+
 import { FC, useState } from "react"
 import { SubmitHandler, useForm } from "react-hook-form"
 import { IAuthInput } from "./auth.interface"
 import styles from './Auth.module.scss'
-import Meta from "utils/meta/Meta"
-import Heading from "components/ui/heading/Heading"
-import Button from "components/ui/form-elements/Button"
 import AuthFields from "./AuthFields"
-import { useActions } from "hooks/useActions"
+import { useAuthRedirect } from "../../../hooks/useAuthRedirect"
+import { useAuth } from "../../../hooks/useAuth"
+import { useActions } from "../../../hooks/useActions"
+import Meta from "../../../utils/meta/Meta"
+import Heading from "../../ui/heading/Heading"
+import Button from "../../ui/form-elements/Button"
 
 const Auth: FC = () => {
 	useAuthRedirect()

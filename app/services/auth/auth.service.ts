@@ -1,10 +1,10 @@
-import { axiosClassic } from "api/interceptors";
-import { getAuthUrl } from "config/api.config";
-import { register } from "store/users/user.actions";
-import { IAuthResponse } from "store/users/user.interface";
+
+import { getContentType } from "../../api/api.helpers";
+import { axiosClassic } from "../../api/interceptors";
+import { getAuthUrl } from "../../config/api.config";
+import { IAuthResponse } from "../../store/users/user.interface";
 import { removeTokensStorage, saveToStorage } from "./auth.helper";
 import Cookies from "js-cookie";
-import { getContentType } from "api/api.helpers";
 
 export const AuthService = {
   async register(email: string, password: string) {

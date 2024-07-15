@@ -1,17 +1,16 @@
 import { FC } from 'react'
 import { IMoviePage } from '../../../../pages/movie/[slug]'
-import Meta from '@/utils/meta/Meta'
-import Banner from '@/components/ui/banner/Banner'
-import SubHeading from '@/components/ui/heading/SubHeading'
-import Gallery from '@/components/ui/gallery/Gallery'
 import styles from './SingleMovie.module.scss'
 import Content from './Content/Content'
 import ContentList from './Content/ContentList/ContentList'
-import { getActorUrl, getGenreUrl } from 'config/url.config'
 import dynamic from 'next/dynamic'
 import { useUpdateCountOpened } from './RateMovie/useUpdateCountOpened'
 import Image from 'next/image'
-import ButtonTest from '@/components/ui/form-elements/ButtonTest'
+import Meta from '../../../utils/meta/Meta'
+import Banner from '../../ui/banner/Banner'
+import { getActorUrl, getGenreUrl } from '../../../config/url.config'
+import SubHeading from '../../ui/heading/SubHeading'
+import Gallery from '../../ui/gallery/Gallery'
 
 
 // const DynamicPlayer = dynamic(() => import('@/components/ui/video-player/VideoPlayer'), {

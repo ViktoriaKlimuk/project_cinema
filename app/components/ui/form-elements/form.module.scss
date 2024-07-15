@@ -23,11 +23,11 @@
 		}
 		input {
 			width: 100%;
-			background-color: transparent;
+			background-color: transparent !important;
 			outline: none;
-			color: white;
 			border: none;
-			padding: 5px 0;
+			padding: 12px 0 12px 12px;
+			letter-spacing: 0.1em;
 			font-size: calc($index * 0.7);
 			border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 			transition: border-color 0.3s ease-in-out;
@@ -43,9 +43,9 @@
 		margin-bottom: calc($index * 1);
 	}
 }
+
 .button {
 	border: none;
-	color: white;
 	--border-width: 1px;
 	width: 100%;
 	position: relative;

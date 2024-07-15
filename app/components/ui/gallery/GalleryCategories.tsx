@@ -7,58 +7,63 @@ const GalleryCategories = () => {
 	return (
 			<div className={styles.wrapper}>
 				<Link href={'/movies'}>
-					<a className={styles.card}>
-						<Image src={'/icons/movieIcon.svg'} width={25} height={25} draggable={false} />
+					<div className={styles.card}>
+						<Image src={'/icons/movieIcon.svg'} width={25} height={25} draggable={false} alt=''/>
 						<p>Фильмы</p>
-					</a>
+					</div>
 				</Link>
 				<Link href={'/series'}>
-					<a className={styles.card}>
-						<Image src={'/icons/serialIcon.svg'} width={25} height={25} draggable={false} />
+					<div className={styles.card}>
+						<Image src={'/icons/serialIcon.svg'} width={25} height={25} draggable={false} alt=''/>
 						<p>Сериалы</p>
-					</a>
+					</div>
 				</Link>
 				<Link href={'/cartoons'}>
-					<a className={styles.card}>
-						<Image src={'/icons/cartoonIcon.svg'} width={25} height={25} draggable={false} />
+					<div className={styles.card}>
+						<Image src={'/icons/cartoonIcon.svg'} width={25} height={25} draggable={false} alt=''/>
 						<p>Мультфильмы</p>
-					</a>
+					</div>
 				</Link>
 				<Link href={'/movies'}>
-					<a className={styles.card}>
-						<Image src={'/icons/topIcon.svg'} width={25} height={25} draggable={false} />
+					<div className={styles.card}>
+						<Image 
+						src={'/icons/topIcon.svg'} 
+						width={25} 
+						height={25} 
+						draggable={false}
+						alt='' />
 						<p>Топ-100</p>
-					</a>
+					</div>
 				</Link>
 				<Link href={'/genres'}>
-					<a className={styles.card}>
-						<Image src={'/icons/categoryIcon.svg'} width={25} height={25} draggable={false} />
+					<div className={styles.card}>
+						<Image src={'/icons/categoryIcon.svg'} width={25} height={25} draggable={false} alt=''/>
 						<p>Жанры</p>
-					</a>
+					</div>
 				</Link>
 				<Link href={'/trending'}>
-					<a className={styles.card}>
-						<Image src={'/icons/movieIcon.svg'} width={25} height={25} draggable={false} />
+					<div className={styles.card}>
+						<Image src={'/icons/movieIcon.svg'} width={25} height={25} draggable={false} alt=''/>
 						<p>Сейчас смотрят</p>
-					</a>
+					</div>
 				</Link>
 				<Link href={'/fresh'}>
-					<a className={styles.card}>
-						<Image src={'/icons/freshIcon.svg'} width={25} height={25} draggable={false} />
+					<div className={styles.card}>
+						<Image src={'/icons/freshIcon.svg'} width={25} height={25} draggable={false} alt=''/>
 						<p>Новинки</p>
-					</a>
+					</div>
 				</Link>
 				<Link href={'/favorites'}>
-					<a className={styles.card}>
-						<Image src={'/icons/favoriteIcon.svg'} width={25} height={25} draggable={false} />
+					<div className={styles.card}>
+						<Image src={'/icons/favoriteIcon.svg'} width={25} height={25} draggable={false} alt=''/>
 						<p>Избранное</p>
-					</a>
+					</div>
 				</Link>
 				<Link href={'/movies'}>
-					<a className={styles.card}>
-						<Image src={'/icons/choiseIcon.svg'} width={25} height={25} draggable={false} />
+					<div className={styles.card}>
+						<Image src={'/icons/choiseIcon.svg'} width={25} height={25} draggable={false} alt=''/>
 						<p>Подборки</p>
-					</a>
+					</div>
 				</Link>
 			</div>
 	)

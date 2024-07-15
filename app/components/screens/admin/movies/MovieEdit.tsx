@@ -1,25 +1,26 @@
 import { FC } from 'react'
 import { Controller, useForm } from 'react-hook-form'
-import Meta from '@/utils/meta/Meta'
 import AdminNavigation from '../AdminNavigation/AdminNavigation'
-import Heading from '@/components/ui/heading/Heading'
-import SkeletonLoader from '@/components/ui/skeleton-loader/SkeletonLoader'
-import Field from '@/components/ui/form-elements/Field'
-import SlugField from '@/components/ui/form-elements/SlugField/SlugField'
-import generateSlug from '@/utils/string/generateSlug'
 import styles from '../../../ui/form-elements/admin-from.module.scss'
-import Button from '@/components/ui/form-elements/Button'
 import dynamic from 'next/dynamic'
 import { IMovieEditInput } from './movie-edit.interface'
 import { useMovieEdit } from './useMovieEdit'
 import { useAdminGenres } from './useAdminGenres'
 import { useAdminActors } from './useAdminActors'
+import Meta from '../../../../utils/meta/Meta'
+import Heading from '../../../ui/heading/Heading'
+import SkeletonLoader from '../../../ui/skeleton-loader/SkeletonLoader'
+import Field from '../../../ui/form-elements/Field'
+import SlugField from '../../../ui/form-elements/SlugField/SlugField'
+import generateSlug from '../../../../utils/string/generateSlug'
+import Button from '../../../ui/form-elements/Button'
+import Image from 'next/image'
 
 
-const DynamicTextEditor = dynamic(() => import('@/components/ui/form-elements/TextEditor'), {
+const DynamicTextEditor = dynamic(() => import('../../../ui/form-elements/TextEditor'), {
 	ssr: false,
 })
-const DynamicSelect = dynamic(() => import('@/components/ui/select/Select'), {
+const DynamicSelect = dynamic(() => import('../../../ui/select/Select'), {
 	ssr: false,
 })
 
@@ -127,7 +128,7 @@ const MovieEdit: FC = () => {
 										className={styles.input}
 									/>
 									<div className={styles.photoContainer}>
-										<img src={getValues('poster')} alt="" className={styles.actorPhoto} />
+										<Image src={getValues('poster')} alt="" className={styles.actorPhoto} layout='fill'/>
 									</div>
 								</div>
 								<div className={styles.photo}>
@@ -139,7 +140,7 @@ const MovieEdit: FC = () => {
 										className={styles.input}
 									/>
 									<div className={styles.photoContainer}>
-										<img src={getValues('bigPoster')} alt="" className={styles.actorPhoto} />
+										<Image src={getValues('bigPoster')} alt="" layout='fill' className={styles.actorPhoto}/>
 									</div>
 								</div>
 							</div>

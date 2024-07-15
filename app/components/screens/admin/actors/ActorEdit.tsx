@@ -1,16 +1,17 @@
 import { FC } from 'react'
 import { useForm } from 'react-hook-form'
-import Meta from '@/utils/meta/Meta'
 import AdminNavigation from '../AdminNavigation/AdminNavigation'
-import Heading from '@/components/ui/heading/Heading'
-import SkeletonLoader from '@/components/ui/skeleton-loader/SkeletonLoader'
-import Field from '@/components/ui/form-elements/Field'
-import SlugField from '@/components/ui/form-elements/SlugField/SlugField'
-import generateSlug from '@/utils/string/generateSlug'
 import styles from '../../../ui/form-elements/admin-from.module.scss'
-import Button from '@/components/ui/form-elements/Button'
 import { IActorEditInput } from './actor-edit.interface'
 import { useActorEdit } from './useActorEdit'
+import Image from 'next/image'
+import Meta from '../../../../utils/meta/Meta'
+import Heading from '../../../ui/heading/Heading'
+import SkeletonLoader from '../../../ui/skeleton-loader/SkeletonLoader'
+import Field from '../../../ui/form-elements/Field'
+import SlugField from '../../../ui/form-elements/SlugField/SlugField'
+import generateSlug from '../../../../utils/string/generateSlug'
+import Button from '../../../ui/form-elements/Button'
 
 
 const ActorEdit: FC = () => {
@@ -54,7 +55,7 @@ const ActorEdit: FC = () => {
 								className={styles.input}
 							/>
 							<div className={styles.photoContainer}>
-								<img src={getValues('photo')} alt="" className={styles.actorPhoto} />
+								<Image src={getValues('photo')} alt="" className={styles.actorPhoto} />
 							</div>
 						</div>
 						<Button className={styles.updateButton}>Обновить</Button>

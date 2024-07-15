@@ -1,10 +1,11 @@
-import { IGenre } from '@/shared/interfaces/movie.types'
+
 import styles from './Collections.module.scss'
-import Meta from '@/utils/meta/Meta'
 import { FC } from 'react'
-import Heading from '@/components/ui/heading/Heading'
-import Description from '@/components/ui/heading/Description'
 import TestItem from './CollectionItem'
+import { IGenre } from '../../../shared/interfaces/movie.types'
+import Meta from '../../../utils/meta/Meta'
+import Heading from '../../ui/heading/Heading'
+import Description from '../../ui/heading/Description'
 
 const title = 'Discovery'
 const description = 'In this section you will find all genres on our site'

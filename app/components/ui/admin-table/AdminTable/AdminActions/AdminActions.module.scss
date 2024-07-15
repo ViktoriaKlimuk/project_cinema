@@ -6,7 +6,7 @@
 	}
 	> button{
 		display: flex;
-		background-color: transparent;
+		background-color: $transparent;
 		border: none;
 		color:$button-red;
 		font-size: calc($index * 1);

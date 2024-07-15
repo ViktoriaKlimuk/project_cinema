@@ -1,19 +1,17 @@
-import { MovieService } from '@/services/movie.service'
-import { IMovie } from '@/shared/interfaces/movie.types'
+
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Error404 from '../404'
-import { IGalleryItem } from '@/components/ui/gallery/gallery.interface'
-import SingleMovie from '@/components/screens/single-movie/SingleMovie'
-import { getMovieUrl } from 'config/url.config'
-import { getGenresList } from '@/utils/movie/getGenresList'
+import { IMovie } from '../../app/shared/interfaces/movie.types'
+import { IGalleryItem } from '../../app/components/ui/gallery/gallery.interface'
+import SingleMovie from '../../app/components/screens/single-movie/SingleMovie'
+import { MovieService } from '../../app/services/movie.service'
+import { getMovieUrl } from '../../app/config/url.config'
 
 
 export interface IMoviePage {
 	movie: IMovie 
 	similarMovies: IGalleryItem[]
 }
-
-
 
 const MoviePage: NextPage<IMoviePage> = ({ movie, similarMovies }) => {
 	return movie ? (

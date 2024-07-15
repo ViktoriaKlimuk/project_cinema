@@ -21,10 +21,18 @@ const Gallery: FC<{ items: IGalleryItem[] }> = ({ items }) => {
 					swiper.navigation.update();
 				}}
 				breakpoints={{
-					1920: {
-						slidesPerView: 4,
-						spaceBetween: 25
-					}
+					320: {
+						slidesPerView: 1,
+						spaceBetween: 40,
+					},
+					768: {
+						slidesPerView: 2,
+						spaceBetween: 40,
+					},
+					// 768: {
+					// 	slidesPerView: 3,
+					// 	spaceBetween: 25,
+					// }
 				}}
 				modules={[Navigation]}
 				className={styles.gallery}

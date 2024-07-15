@@ -1,12 +1,11 @@
 import { SubmitHandler, UseFormSetValue } from "react-hook-form";
 import { useRouter } from "next/router";
 import { useMutation, useQuery } from "react-query";
-import { toastError } from "@/utils/toastError";
-import { getKeys } from "@/utils/object/getKeys";
-import { getAdminUrl } from "config/url.config";
 import { IUserEditInput } from "./user-edit.interface";
-import { UserService } from "@/services/user.service";
 import { toastr } from "react-redux-toastr";
+import { UserService } from "../../../../services/user.service";
+import { toastError } from "../../../../utils/toastError";
+import { getAdminUrl } from "../../../../config/url.config";
 
 
 

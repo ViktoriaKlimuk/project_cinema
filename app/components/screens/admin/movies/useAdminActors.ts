@@ -1,7 +1,8 @@
-import { IOption } from "@/components/ui/select/select.interface"
-import { ActorService } from "@/services/actor.service"
-import { toastError } from "@/utils/toastError"
+
 import { useQuery } from "react-query"
+import { ActorService } from "../../../../services/actor.service"
+import { IOption } from "../../../ui/select/select.interface"
+import { toastError } from "../../../../utils/toastError"
 
 export const useAdminActors = () => {
 	const queryData = useQuery(
@@ -9,7 +10,7 @@ export const useAdminActors = () => {
 		() => ActorService.getAll(), {
 			select: ({ data }) =>
 				data.map(
-					(actor): IOption => ({
+					(actor): IOption=> ({
 						label:actor.name,
 						value:actor._id,
 					})

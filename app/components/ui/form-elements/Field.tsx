@@ -7,8 +7,7 @@ const Field = forwardRef<HTMLInputElement, IField>( ({placeholder, error, type="
   return (
 	 <div className={cn(styles.common, styles.checkbox)} style={style}>
 		<label>
-			<span>{placeholder}</span>
-			<input type={type} ref={ref} {...rest}/>
+			<input type={type} ref={ref} {...rest} placeholder={placeholder} />
 		</label>
 		{error && <div className={styles.error}>{error.message}</div>}
 	 </div>

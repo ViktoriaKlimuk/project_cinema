@@ -1,7 +1,8 @@
-import { IOption } from "@/components/ui/select/select.interface"
-import { GenreService } from "@/services/genre.service"
-import { toastError } from "@/utils/toastError"
+
 import { useQuery } from "react-query"
+import { GenreService } from "../../../../services/genre.service"
+import { IOption } from "../../../ui/select/select.interface"
+import { toastError } from "../../../../utils/toastError"
 
 export const useAdminGenres = () => {
 	const queryData = useQuery(

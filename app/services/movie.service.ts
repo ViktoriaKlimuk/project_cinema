@@ -1,8 +1,8 @@
-import { axiosClassic } from 'api/interceptors'
-import { getMoviesUrl } from 'config/api.config'
-import { IMovie } from 'shared/interfaces/movie.types'
-import axios from 'api/interceptors'
-import { IMovieEditInput } from '@/components/screens/admin/movies/movie-edit.interface'
+import axios from "axios"
+import { axiosClassic } from "../api/interceptors"
+import { getMoviesUrl } from "../config/api.config"
+import { IMovie } from "../shared/interfaces/movie.types"
+import { IMovieEditInput } from "../components/screens/admin/movies/movie-edit.interface"
 
 
 export const MovieService = {

@@ -1,24 +1,27 @@
-import { IMovie } from '@/shared/interfaces/movie.types'
+
 import { FC } from 'react'
 import styles from './Favorite.module.scss'
-import FavoriteButton from '@/components/ui/favoriteButton/FavoriteButton'
 import Link from 'next/link'
-import { getMovieUrl } from 'config/url.config'
-import { useAuth } from '@/hooks/useAuth'
+import Image from 'next/image'
+import { useAuth } from '../../../hooks/useAuth'
+import { IMovie } from '../../../shared/interfaces/movie.types'
+import { getMovieUrl } from '../../../config/url.config'
+import FavoriteButton from '../../ui/favoriteButton/FavoriteButton'
 
 const FavoriteItem: FC<{ movie: IMovie }> = ({ movie}) => {
 	const {user} = useAuth()
 	return (
 		<div className={styles.itemWrapper}>
 			<Link href={getMovieUrl(movie.slug)}>
-				<a className={styles.item}>
-					<img
+				<div className={styles.item}>
+					<Image
 						alt={movie.title}
 						src={movie.poster}
 						draggable={false}
+						layout='fill'
 					/>
 					<h4 className={styles.title}>{movie.title}</h4>
-				</a>
+				</div>
 			</Link>
 			{user && <FavoriteButton movieId={movie._id} variant='card'/>}
 		</div>

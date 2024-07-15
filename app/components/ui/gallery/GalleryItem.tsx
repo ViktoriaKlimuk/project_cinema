@@ -9,21 +9,24 @@ import Image from 'next/image'
 
 const GalleryItem: FC<IGalleryItemProps> = ({ item, variant }) => {
 	return (
-		<Link href={item.link}>
+		<Link href={item.link} >
 
-			<a className={cn(styles.cardContainer, {
+			<div className={cn(styles.cardContainer, {
 				[styles.withText]: item.content,
 				[styles.horizontal]: variant === 'horizontal',
 				[styles.filmDetails]: variant === 'filmDetails',
 				[styles.mainPage]: variant === 'mainPage',
 			})}>
 				<article className={styles.movieCard}>
-					<img src={item.posterPath} alt={item.name} draggable={false} className={styles.mainImg} />
+					<Image src={item.posterPath} 
+						 alt={item.name} 
+						 draggable={false} className={styles.mainImg} 
+						 layout="fill"/>
 					{item.movieType === 'tv-series' &&
-						<img src='/seriesLogo.svg' className={styles.seriesLogo} alt="Иконка сериала" />
+						<Image src='/seriesLogo.svg' className={styles.seriesLogo} alt="Иконка сериала" layout="fill"/>
 					}
 					{item.movieType === 'cartoons' &&
-						<img src='/cartoonsLogo.svg' className={styles.cartoonsLogo} alt="Иконка мультфильма" />
+						<Image src='/cartoonsLogo.svg' className={styles.cartoonsLogo} alt="Иконка мультфильма" layout="fill"/>
 					}
 					{item.content && (
 						<div className={styles.content}>
@@ -47,19 +50,8 @@ const GalleryItem: FC<IGalleryItemProps> = ({ item, variant }) => {
 					)}
 				</article>
 
-			</a>
+			</div>
 		</Link>
-
-
-
-
-
-
-
-
-
-
-
 
 		// <div className={styles.card}>
 		// 	<Link href={item.link}>

@@ -15,7 +15,6 @@
 	justify-content: flex-start;
 }
 .navlink {
-  color: white;
   text-decoration: none;
   svg {
     font-size: calc($index * 0.7);
@@ -28,7 +27,6 @@
 }
 
 .list {
-	width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;

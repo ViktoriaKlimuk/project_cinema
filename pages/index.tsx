@@ -1,14 +1,14 @@
 import type { GetStaticProps, NextPage } from "next";
-import Home from "components/screens/home/Home";
-import { IHome } from "@/components/screens/home/home.interface";
-import { MovieService } from "@/services/movie.service";
-import { ISlide } from "@/components/ui/slider/slider.interface";
-import { getGenresList } from "@/utils/movie/getGenresList";
-import { getActorUrl, getGenreUrl, getMovieUrl } from "config/url.config";
-import { ActorService } from "@/services/actor.service";
-import { IGalleryItem } from "@/components/ui/gallery/gallery.interface";
-import { GenreService } from "@/services/genre.service";
-import { IGenre } from "@/shared/interfaces/movie.types";
+import Home from "../app/components/screens/home/Home";
+import { MovieService } from "../app/services/movie.service";
+import { ISlide } from "../app/components/ui/slider/slider.interface";
+import { getActorUrl, getGenreUrl, getMovieUrl } from "../app/config/url.config";
+import { getGenresList } from "../app/utils/movie/getGenresList";
+import { ActorService } from "../app/services/actor.service";
+import { IGalleryItem } from "../app/components/ui/gallery/gallery.interface";
+import { GenreService } from "../app/services/genre.service";
+import { IGenre } from "../app/shared/interfaces/movie.types";
+import { IHome } from "../app/components/screens/home/home.interface";
 
 
 const HomePage: NextPage<any> = ({ slides, trendingMovies, actors, genres, freshMovies }) => {

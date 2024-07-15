@@ -1,10 +1,11 @@
-import { useFavorites } from '@/components/screens/favorites/useFavorites'
-import { UserService } from '@/services/user.service'
-import { toastError } from '@/utils/toastError'
+
 import { FC, useEffect, useState } from 'react'
 import { useMutation } from 'react-query'
 import styles from './FavoriteButton.module.scss'
 import cn from 'classnames'
+import { useFavorites } from '../../screens/favorites/useFavorites'
+import { UserService } from '../../../services/user.service'
+import { toastError } from '../../../utils/toastError'
 
 const FavoriteButton: FC<{ movieId: string, variant: string }> = ({ movieId, variant }) => {
 	const [isSmashed, setIsSmashed] = useState(false)

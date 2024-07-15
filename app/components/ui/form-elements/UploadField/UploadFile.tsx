@@ -4,6 +4,7 @@ import { useUpload } from './useUpload'
 import cn from 'classnames'
 import styles from './UploadField.module.scss'
 import SkeletonLoader from '../../skeleton-loader/SkeletonLoader'
+import Image from 'next/image'
 
 const UploadField: FC<IUploadField> = ({
 	placeholder,
@@ -27,10 +28,10 @@ const UploadField: FC<IUploadField> = ({
 
 			{!isNoImage && (
 				<div className={styles.uploadImageContainer}>
-				{isLoading ? (
+				{isLoading ? (  
 					<SkeletonLoader count={1} className={styles.skeleton}/>
 				 ) : (
-					value && <img src={value} alt='' className={styles.imageFile}/>
+					value && <Image src={value} alt='' className={styles.imageFile} layout='fill'/>
 				 )}
 				</div>
 			)}

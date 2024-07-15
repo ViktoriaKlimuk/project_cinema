@@ -1,10 +1,10 @@
 import { ChangeEvent, FC, useState } from "react"
 import styles from './Search.module.scss'
 import SearchList from "./SearchList/SearchList"
-import SearchField from "components/ui/search-field/SearchField"
-import { useDebounce } from "@/hooks/useDebounce"
 import { useQuery } from "react-query"
-import { MovieService } from "@/services/movie.service"
+import { useDebounce } from "../../../hooks/useDebounce"
+import { MovieService } from "../../../services/movie.service"
+import SearchField from "../../ui/search-field/SearchField"
 
 
 const Search: FC = () => {

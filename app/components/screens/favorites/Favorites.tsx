@@ -1,11 +1,11 @@
 import { FC } from 'react'
 import { useFavorites } from './useFavorites'
-import Meta from '@/utils/meta/Meta'
-import Heading from '@/components/ui/heading/Heading'
 import styles from './Favorite.module.scss'
-import SkeletonLoader from '@/components/ui/skeleton-loader/SkeletonLoader'
 import FavoriteItem from './FavoriteItem'
-import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '../../../hooks/useAuth'
+import Meta from '../../../utils/meta/Meta'
+import Heading from '../../ui/heading/Heading'
+import SkeletonLoader from '../../ui/skeleton-loader/SkeletonLoader'
 
 const Favorites: FC = () => {
 	const { favoritesMovies, isLoading, } = useFavorites()

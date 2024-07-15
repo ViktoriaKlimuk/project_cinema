@@ -1,9 +1,10 @@
-import SkeletonLoader from "components/ui/skeleton-loader/SkeletonLoader"
+
 import { FC } from "react"
 import { useQuery } from "react-query"
-import { MovieService } from "services/movie.service"
 import styles from './Movies.module.scss'
 import MoviesList from "./MoviesList"
+import { MovieService } from "../../../../services/movie.service"
+import SkeletonLoader from "../../../ui/skeleton-loader/SkeletonLoader"
 
 const PopularMovies: FC = () => {
 	const { isLoading, data: popularMovies } = useQuery('Popular movies in sidebar', () => MovieService.getMostPopularMovies())

@@ -1,7 +1,8 @@
-import Field from 'components/ui/form-elements/Field'
+
 import { FC } from 'react'
 import { FormState, UseFormRegister } from 'react-hook-form'
-import { validEmail, validPassword } from 'shared/regex'
+import Field from '../../ui/form-elements/Field'
+import { validEmail, validPassword } from '../../../shared/regex'
 
 interface IAuthFields {
 	register: UseFormRegister<any>

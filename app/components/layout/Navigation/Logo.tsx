@@ -6,7 +6,7 @@ import Image from "next/image";
 const Logo: FC = () => {
 	return (
 		<Link href='/'>
-			<a id="link" >
+			<div id="link" className={styles.logo}>
 				<Image
 					src='/logo.svg'
 					width={300}
@@ -14,7 +14,7 @@ const Logo: FC = () => {
 					draggable={false}
 					alt='Онлайн кинотеатр'
 				/>
-			</a>
+			</div>
 		</Link>
 	)
 }

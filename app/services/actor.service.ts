@@ -1,8 +1,9 @@
-import { axiosClassic } from 'api/interceptors'
-import { getActorsUrl } from 'config/api.config'
-import { IActor } from 'shared/interfaces/movie.types'
-import axios from 'api/interceptors'
-import { IActorEditInput } from '@/components/screens/admin/actors/actor-edit.interface'
+import axios from "axios"
+import { axiosClassic } from "../api/interceptors"
+import { getActorsUrl } from "../config/api.config"
+import { IActor } from "../shared/interfaces/movie.types"
+import { IActorEditInput } from "../components/screens/admin/actors/actor-edit.interface"
+
 
 export const ActorService = {
 	async getAll(searchTerm?: string) {

@@ -1,9 +1,10 @@
-import MenuItem from "components/layout/Navigation/MenuContainer/MenuItem";
-import { useAuth } from "hooks/useAuth";
+
 import { FC, useEffect, useState } from "react";
 import LogoutButton from "./LogoutButton";
-import { getAdminHomeUrl } from "config/url.config";
 import styles from '../Sidebar.module.scss'
+import { useAuth } from "../../../../hooks/useAuth";
+import MenuItem from "../../Navigation/MenuContainer/MenuItem";
+import { getAdminHomeUrl } from "../../../../config/url.config";
 
 const AuthItems: FC = () => {
 	const { user } = useAuth()

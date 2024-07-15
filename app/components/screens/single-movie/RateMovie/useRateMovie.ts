@@ -1,9 +1,10 @@
-import { useAuth } from "@/hooks/useAuth"
-import { RatingService } from "@/services/rating.service"
-import { toastError } from "@/utils/toastError"
+
 import { useState } from "react"
 import { useMutation, useQuery } from "react-query"
 import { toastr } from "react-redux-toastr"
+import { useAuth } from "../../../../hooks/useAuth"
+import { RatingService } from "../../../../services/rating.service"
+import { toastError } from "../../../../utils/toastError"
 
 export const useRateMovie = (movieId:string) => {
 	const [rating, setRating] = useState(0)

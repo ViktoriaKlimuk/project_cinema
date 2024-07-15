@@ -1,10 +1,10 @@
 import axios from 'axios'
-import { API_SERVER_URL, API_URL } from 'config/api.config'
 import { errorCatch, getContentType } from './api.helpers'
 import Cookies from 'js-cookie'
-import { AuthService } from '@/services/auth/auth.service'
-import { removeTokensStorage } from '@/services/auth/auth.helper'
-import { IS_PRODUCTION } from 'config/constants'
+import { IS_PRODUCTION } from '../config/constants'
+import { API_SERVER_URL, API_URL } from '../config/api.config'
+import { AuthService } from '../services/auth/auth.service'
+import { removeTokensStorage } from '../services/auth/auth.helper'
 
 export const axiosClassic = axios.create({
 	baseURL: IS_PRODUCTION ? API_SERVER_URL : API_URL,

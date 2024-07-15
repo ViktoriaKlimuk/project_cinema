@@ -2,20 +2,15 @@ import { FC } from 'react'
 import styles from './Profile.module.scss'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { IProfileInput } from './profile.interface'
-import { UserService } from '@/services/user.service'
 import { useMutation, useQuery } from 'react-query'
-import { toastError } from '@/utils/toastError'
 import { toastr } from 'react-redux-toastr'
-import Meta from '@/utils/meta/Meta'
-import Heading from '@/components/ui/heading/Heading'
-import SkeletonLoader from '@/components/ui/skeleton-loader/SkeletonLoader'
 import AuthFields from '../auth/AuthFields'
-import Button from '@/components/ui/form-elements/Button'
-
-
-
-
-
+import { UserService } from '../../../services/user.service'
+import { toastError } from '../../../utils/toastError'
+import Meta from '../../../utils/meta/Meta'
+import Heading from '../../ui/heading/Heading'
+import SkeletonLoader from '../../ui/skeleton-loader/SkeletonLoader'
+import Button from '../../ui/form-elements/Button'
 
 const Profile: FC = () => {
 	const { handleSubmit, register, formState, setValue } =
@@ -51,8 +46,8 @@ const Profile: FC = () => {
 
 	return (
 		<Meta title="Профиль">
-			<Heading title="Профиль" />
 			<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+				<Heading title="Профиль" />
 				{isLoading ? (
 					<SkeletonLoader count={2} />
 				) : (

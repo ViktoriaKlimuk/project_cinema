@@ -3,12 +3,10 @@
 	width: 100%;
 	color: rgba(255,255,255, 0.3);
 	font-size:calc($index * 0.7);
-	font-weight: 700;
 	text-align: left;
 	margin-bottom:calc($index * 0.3)
 }
 .subheading {
-	color:white;
 	font-size:calc($index * 0.8);
 	letter-spacing: calc($index * 0.25);
 	font-weight: 600;

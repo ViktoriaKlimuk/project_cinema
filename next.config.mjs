@@ -17,6 +17,12 @@ const nextConfig = {
 	// 	  },
 	// 	],
 	//  },
+
+	images: {
+		formats:['image/avif', 'image/webp'],
+		domains:["image.openmoviedb.com","kinopoiskapiunofficial.tech","avatars.mds.yandex.net"]
+	},
+
 	async rewrites() {
 	  return [
 		 {

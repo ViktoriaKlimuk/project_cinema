@@ -1,14 +1,14 @@
 import { FC } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import { useUserEdit } from './useUserEdit'
-import Meta from '@/utils/meta/Meta'
 import AdminNavigation from '../AdminNavigation/AdminNavigation'
-import Heading from '@/components/ui/heading/Heading'
-import SkeletonLoader from '@/components/ui/skeleton-loader/SkeletonLoader'
 import styles from '../../../ui/form-elements/admin-from.module.scss'
-import Button from '@/components/ui/form-elements/Button'
 import AuthFields from '../../auth/AuthFields'
 import { IUserEditInput } from './user-edit.interface'
+import Meta from '../../../../utils/meta/Meta'
+import Heading from '../../../ui/heading/Heading'
+import SkeletonLoader from '../../../ui/skeleton-loader/SkeletonLoader'
+import Button from '../../../ui/form-elements/Button'
 
 
 

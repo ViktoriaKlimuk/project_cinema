@@ -1,16 +1,14 @@
-import { useAuth } from '@/hooks/useAuth'
+
 import { FC } from 'react'
 import { useRateMovie } from './useRateMovie'
 import styles from './RateMovie.module.scss'
 import StarRating from 'react-star-rating-component'
+import { useAuth } from '../../../../hooks/useAuth'
 
 interface IRateMovie {
 	id: string
 	slug: string
 }
-
-
-
 
 const RateMovie: FC<IRateMovie> = ({ id, slug }) => {
 	const { user } = useAuth()

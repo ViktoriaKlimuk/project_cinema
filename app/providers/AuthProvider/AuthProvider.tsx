@@ -1,10 +1,11 @@
-import { useActions } from '@/hooks/useActions'
-import { useAuth } from '@/hooks/useAuth'
-import { TypeComponentAuthFields } from '@/shared/interfaces/auth.types'
+
 import { useRouter } from 'next/router'
 import React, { FC, useEffect } from 'react'
 import Cookies from 'js-cookie'
 import dynamic from 'next/dynamic'
+import { TypeComponentAuthFields } from '../../shared/interfaces/auth.types'
+import { useAuth } from '../../hooks/useAuth'
+import { useActions } from '../../hooks/useActions'
 
 
 

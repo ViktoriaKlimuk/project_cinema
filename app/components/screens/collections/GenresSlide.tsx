@@ -2,9 +2,9 @@ import { FC, useRef } from 'react'
 import styles from './Collections.module.scss'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import { IGenre } from '@/shared/interfaces/movie.types';
-import { MaterialIcon } from '@/components/ui/MaterialIcon';
 import CollectionItem from './CollectionItem';
+import { IGenre } from '../../../shared/interfaces/movie.types';
+import { MaterialIcon } from '../../ui/MaterialIcon';
 
 const GenresSlide: FC<{ items: IGenre[] }> = ({ items }) => {
 	const prevRef = useRef(null);
@@ -26,14 +26,10 @@ const GenresSlide: FC<{ items: IGenre[] }> = ({ items }) => {
 						slidesPerView: 3,
 						spaceBetween: 25
 					},
-					1400: {
-						slidesPerView: 5,
+					468: {
+						slidesPerView: 4,
 						spaceBetween: 25
-					},
-					1920: {
-						slidesPerView: 6,
-						spaceBetween: 25
-					},
+					}
 				}}
 				modules={[Navigation]}
 				className={styles.gallery}

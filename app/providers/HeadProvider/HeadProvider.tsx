@@ -1,8 +1,8 @@
 import { FC } from "react"
 import NextProgressBar from 'nextjs-progressbar';
-import { accentColor } from "config/constants";
 import FavIcons from "./FavIcons";
 import Head from "next/head";
+import { accentColor } from "../../config/constants";
 
 const HeadProvider: FC = ({ children }) => {
 	return (

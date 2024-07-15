@@ -10,9 +10,9 @@ const SearchList: FC<{ movies: IMovie[] }> = ({ movies }) => {
 			{movies.length ? (
 				movies.map((movie) => (
 					<Link key={movie._id} href={`/movie/${movie.slug}`}>
-						<a className={styles.searchInfo}>
+						<div className={styles.searchInfo}>
 							<div className={styles.poster_info}>
-								<img src={movie.poster} alt={movie.title} draggable={false} className={styles.poster} />
+								<Image src={movie.poster} alt={movie.title} draggable={false} className={styles.poster} layout="fill"/>
 								<div className={styles.rating}>
 									<Image src={'/starRating.svg'} width={35} height={35} draggable={false} alt='Рейтинг фильма от нашего сайта' />
 									<span>{movie.rating.toFixed(1)}</span>
@@ -26,7 +26,7 @@ const SearchList: FC<{ movies: IMovie[] }> = ({ movies }) => {
 								<p>Продолжительность: {movie.parameters.duration}м</p>
 								<p>Страна: {movie.parameters.country}</p>
 							</div>
-						</a>
+						</div>
 					</Link>
 				))
 			) : (<div className={styles.notFound}>Фильмы не найдены</div>)}

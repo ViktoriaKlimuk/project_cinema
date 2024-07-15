@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import Image from 'next/image';
 
 
 // import required modules
@@ -22,7 +23,7 @@ const SwiperSlider = () => {
 				grabCursor={true}
 				centeredSlides={true}
 				loop={true}
-				slidesPerView={'auto'}
+				// slidesPerView={'5'}
 				coverflowEffect={{
 					rotate: 0,
 					stretch: 0,
@@ -38,22 +39,22 @@ const SwiperSlider = () => {
 
 
 					<SwiperSlide>
-							<img src='https://fwmedia.fandomwire.com/wp-content/uploads/2024/03/19091413/deadpool-3.jpg' alt="slide_image" />
+							<Image src='https://fwmedia.fandomwire.com/wp-content/uploads/2024/03/19091413/deadpool-3.jpg' alt="slide_image" layout='fill'/>
 					</SwiperSlide>
 					<SwiperSlide>
-							<img src='https://fwmedia.fandomwire.com/wp-content/uploads/2024/03/19091413/deadpool-3.jpg' alt="slide_image" />
+							<Image src='https://fwmedia.fandomwire.com/wp-content/uploads/2024/03/19091413/deadpool-3.jpg' alt="slide_image" layout='fill'/>
 					</SwiperSlide>
 					<SwiperSlide>
-							<img src='https://fwmedia.fandomwire.com/wp-content/uploads/2024/03/19091413/deadpool-3.jpg' alt="slide_image" />
+							<Image src='https://fwmedia.fandomwire.com/wp-content/uploads/2024/03/19091413/deadpool-3.jpg' alt="slide_image" layout='fill'/>
 					</SwiperSlide>
 					<SwiperSlide>
-							<img src='https://fwmedia.fandomwire.com/wp-content/uploads/2024/03/19091413/deadpool-3.jpg' alt="slide_image" />
+							<Image src='https://fwmedia.fandomwire.com/wp-content/uploads/2024/03/19091413/deadpool-3.jpg' alt="slide_image" layout='fill'/>
 					</SwiperSlide>
 					<SwiperSlide>
-							<img src='https://fwmedia.fandomwire.com/wp-content/uploads/2024/03/19091413/deadpool-3.jpg' alt="slide_image" />
+							<Image src='https://fwmedia.fandomwire.com/wp-content/uploads/2024/03/19091413/deadpool-3.jpg' alt="slide_image" layout='fill'/>
 					</SwiperSlide>
 					<SwiperSlide>
-							<img src='https://fwmedia.fandomwire.com/wp-content/uploads/2024/03/19091413/deadpool-3.jpg' alt="slide_image" />
+							<Image src='https://fwmedia.fandomwire.com/wp-content/uploads/2024/03/19091413/deadpool-3.jpg' alt="slide_image" layout='fill'/>
 					</SwiperSlide>
 
 

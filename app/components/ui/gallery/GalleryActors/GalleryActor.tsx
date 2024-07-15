@@ -13,7 +13,7 @@ const GalleryActor: FC<{ items: IGalleryItem[] }> = ({ items }) => {
 	return (
 		<>
 			<Swiper
-				slidesPerView={7}
+				slidesPerView={1}
 				spaceBetween={'1%'}
 				onInit={(swiper) => {
 					swiper.params.navigation.prevEl = prevRef.current;
@@ -22,16 +22,25 @@ const GalleryActor: FC<{ items: IGalleryItem[] }> = ({ items }) => {
 					swiper.navigation.update();
 				}}
 				breakpoints={{
+
 					320: {
-						slidesPerView: 3,
-						spaceBetween: 25
+						slidesPerView: 2,
+						spaceBetween: 25,
 					},
-					1400: {
+					420: {
+						slidesPerView: 3,
+						spaceBetween: 25,
+					},
+					768: {
+						slidesPerView: 4,
+						spaceBetween: 25,
+					},
+					1024:{
 						slidesPerView: 5,
-						spaceBetween: 25
+						spaceBetween: 25,
 					},
 					1920: {
-						slidesPerView: 5,
+						slidesPerView: 6,
 						spaceBetween: 25
 					},
 				}}

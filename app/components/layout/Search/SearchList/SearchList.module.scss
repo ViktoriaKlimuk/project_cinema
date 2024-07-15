@@ -36,7 +36,6 @@
 	align-items: center;
 	justify-content:space-around;
 	text-decoration: none;
-	color:white;
 	padding:calc($index * 0.4) 0;
 	gap:0 calc($index * 1);
 	transition: background-color 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);

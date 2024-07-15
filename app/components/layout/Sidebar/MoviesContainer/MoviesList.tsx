@@ -12,7 +12,7 @@ const MoviesList: FC<IMovieList> = ({ link, title, movies }) => {
 				<MovieItem key={movie._id} movie={movie} />
 			))}
 			<Link href={link}>
-				<a className={styles.button}>{link === '/trending' ? 'Все популярные фильмы...' : 'Все избранные...'}</a>
+				<div className={styles.button}>{link === '/trending' ? 'Все популярные фильмы...' : 'Все избранные...'}</div>
 			</Link>
 		</div>
 

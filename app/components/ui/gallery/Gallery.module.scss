@@ -21,9 +21,9 @@
 }
 .swiperSlide {
 	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
 }
 
 .cardContainer {
@@ -38,9 +38,8 @@
 }
 .movieCard {
 	width: 100%;
-	height: calc($index * 13);
+	height: calc($index * 20);
 	border-radius: calc($index * 1);
-	color: white;
 	position: relative;
 	overflow: hidden;
 	// font-size: 120%; // zoom
@@ -183,7 +182,7 @@
 		transform: translateY(50%);
 	}
 	.content {
-		transform: translateY(calc(100% - 4.5em));
+		transform: translateY(calc(100% - 2.5em));
 	}
 }
 
@@ -203,7 +202,6 @@
 		backdrop-filter: blur(3px);
 		border-radius: calc($index * 0.3);
 		border: none;
-		color: white;
 		padding: calc($index * 0.6) calc($index * 0.3);
 		font-size: calc($index * 1.5);
 		cursor: pointer;

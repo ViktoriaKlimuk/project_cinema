@@ -1,11 +1,11 @@
-import { ICatalog } from "@/components/ui/catalog-movies/catalog.interface"
-import GalleryItem from "@/components/ui/gallery/GalleryItem"
-import Description from "@/components/ui/heading/Description"
-import Heading from "@/components/ui/heading/Heading"
-import Meta from "@/utils/meta/Meta"
-import { getMovieUrl } from "config/url.config"
+import Meta from '../../../utils/meta/Meta'
+import { ICatalog } from '../../ui/catalog-movies/catalog.interface'
 import styles from '../../ui/catalog-movies/Catalog.module.scss'
 import { FC } from "react"
+import Heading from '../../ui/heading/Heading'
+import Description from '../../ui/heading/Description'
+import GalleryItem from '../../ui/gallery/GalleryItem'
+import { getMovieUrl } from '../../../config/url.config'
 
 
 

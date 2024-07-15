@@ -1,12 +1,13 @@
-import { ITableItem } from '@/components/ui/admin-table/AdminTable/admin-table.interface'
-import { getAdminUrl } from 'config/url.config'
-import { useDebounce } from '@/hooks/useDebounce'
-import { UserService } from '@/services/user.service'
-import { convertMongoDate } from '@/utils/date/convertMongoDate'
-import { toastError } from '@/utils/toastError'
+
 import { toastr } from 'react-redux-toastr'
 import { ChangeEvent, useMemo, useState } from 'react'
 import { useMutation, useQuery } from 'react-query'
+import { useDebounce } from '../../../../hooks/useDebounce'
+import { UserService } from '../../../../services/user.service'
+import { ITableItem } from '../../../ui/admin-table/AdminTable/admin-table.interface'
+import { getAdminUrl } from '../../../../config/url.config'
+import { convertMongoDate } from '../../../../utils/date/convertMongoDate'
+import { toastError } from '../../../../utils/toastError'
 
 export const useUsers = () => {
 	const [searchTerm, setSearchTerm] = useState('')

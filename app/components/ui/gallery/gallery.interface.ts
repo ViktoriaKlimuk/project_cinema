@@ -1,8 +1,9 @@
-import { IGenre } from "@/shared/interfaces/movie.types"
+import { IGenre } from "../../../shared/interfaces/movie.types"
+
 
 export interface IGalleryItem{
 	_id:string
-	posterPath: string
+	posterPath?: string
 	name:string
 	link: string
 	rating:number
